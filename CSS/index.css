@@ -1,0 +1,23 @@
+body{
+    background-image: url(../Pic/Back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+*{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    margin-top: 30vh;
+    margin-left: 10vw;
+}
+h1{
+    font-size:50px;
+}
+h1 a{
+    text-decoration: none;
+}
+h2{
+    display: inline-block;
+    font-weight: 600;
+}
