@@ -7,6 +7,7 @@ body{
 ul{
     list-style: none;
     display: flex;
+    grid-column-gap: 2em;
 }
 *{
     color: white;
