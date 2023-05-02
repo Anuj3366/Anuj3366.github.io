@@ -1,4 +1,4 @@
-var first  = ['a Web develeper','a Gamer','a Student'];
+var first  = ['a Web develeper','a Gamer','a Student','a DSA lover','a competitive programer','a enthusiastic learner'];
 var i = 0;
 var j = 0;
 var maxfirst  = first.length - 1;
@@ -15,7 +15,7 @@ function firstwordchange() {
 
     setTimeout(function () {
         $('#firstword').text(first[i]);
-    }, 200);
+    }, 300);
 
   $('#firstword').velocity("transition.slideUpIn", 900);
 }
