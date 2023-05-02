@@ -4,20 +4,20 @@ var j = 0;
 var maxfirst  = first.length - 1;
 
 function delay() {
-    $('#intro').velocity("transi1ion.slideUpIn", 300);
-    setInterval(firstwordchange, 900);
+    $('#intro').velocity("transi1ion.slideUpIn", 500);
+    setInterval(firstwordchange, 1200);
 }
 
 function firstwordchange() {
     if (i < maxfirst) i++; else i = 0;
 
-    $('#firstword').velocity("transition.slideUpOut",900);
+    $('#firstword').velocity("transition.slideUpOut",500);
 
     setTimeout(function () {
         $('#firstword').text(first[i]);
     }, 300);
 
-  $('#firstword').velocity("transition.slideUpIn", 900);
+  $('#firstword').velocity("transition.slideUpIn", 1200);
 }
 
 setTimeout(delay, 900);
