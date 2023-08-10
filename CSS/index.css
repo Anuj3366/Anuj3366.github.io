@@ -8,21 +8,38 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
-.container{
-    width:1200px;
+#container{
     margin:0 auto;
 }
 .navbar{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-top:1rem;
+    padding:1em;
 }
 .logo{
-    width: 4vw;
+    width: 2em;
 }
 .logo-container{
     display:flex;
     justify-content: baseline;
     align-items: center;
+    margin-right: 6em;
+}
+.logo-text{
+    margin-left: -0.25em;
+    font-size: 1.5em;
+}
+.nav-items{
+    display:flex;
+    gap:4em;
+}
+.nav-items div{
+    font-size: 1em;
+    font-weight:500;
+    cursor: pointer;
+}
+.nav-items div a{
+    text-decoration: none;
+    color: black;
 }
