@@ -43,3 +43,8 @@
     text-decoration: none;
     color: black;
 }
+.nav-items div:hover{
+    transform: scale(1.08);
+    font-weight: 700;
+    transition-duration: 3s;
+    text-shadow: 0 0 0.5em black;
