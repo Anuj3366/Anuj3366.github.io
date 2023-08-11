@@ -1,4 +1,5 @@
 *{
+    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,4 +52,38 @@
     font-weight: 580;
     transition-duration: 1.5s;
     text-shadow: 0 0 0.5em black;
+}
+.introduction{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5em;
+    margin:4em auto;
+    padding:0 1 em;
+    padding-bottom: 8em;;
+}
+.introduction-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2em;
+}
+.user{
+    position:absolute;
+    z-index: 0;
+    width: 15em;
+}
+.image{
+    z-index: 0;
+}
+.background{
+    z-index: -1;
+}
+.faded-name{
+    font-size: 7em;
+    color: rgb(160, 159, 159);
+    bottom: -16%;
+    left:-5vw;
+    font-weight: bold;
 }
