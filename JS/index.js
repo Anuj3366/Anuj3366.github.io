@@ -1,6 +1,6 @@
 var typeData = new Typed(".role", {
     strings: [
-      "Full Stack Developer",
+      "Web Developer",
       "Coder",
       "Dsa Lover",
       "Backend Developer",
