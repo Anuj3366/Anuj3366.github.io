@@ -1,3 +1,9 @@
+<?php
+// Set cache control headers to prevent caching
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/src/typed.css">
+    <script src="script.js?ts=<?php echo time(); ?>"></script>
     <title>Anuj Garg</title>
 </head>
 
