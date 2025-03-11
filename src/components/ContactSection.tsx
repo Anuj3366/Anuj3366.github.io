@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +12,6 @@ const ContactSection = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

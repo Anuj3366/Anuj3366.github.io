@@ -21,9 +21,11 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-          <Button size="lg" className="gap-2">
-            View Projects <ArrowRight className="h-4 w-4" />
-          </Button>
+          <a href="#projects">
+            <Button size="lg" className="gap-2">
+              View Projects <ArrowRight className="h-4 w-4" />
+            </Button>
+          </a>
           <Button size="lg" variant="outline" className="gap-2">
             Download Resume
           </Button>

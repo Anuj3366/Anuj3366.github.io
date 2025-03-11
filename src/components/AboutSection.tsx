@@ -17,7 +17,7 @@ const AboutSection = () => {
         </h2>
 
         <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg dark:prose-invert max-w-none mb-10">
+          <div className="prose prose-lg max-w-none mb-10">
             <p>
               I'm a passionate Full-Stack Developer and problem solver with a knack for building responsive and intuitive web applications.
               Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an SDE Intern soon.

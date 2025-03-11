@@ -102,3 +102,12 @@
     }
   }
 }
+
+/* Add some basic prose styling for the about section */
+.prose p {
+  @apply text-foreground/80 mb-4;
+}
+
+.prose {
+  @apply text-base leading-relaxed;
+}

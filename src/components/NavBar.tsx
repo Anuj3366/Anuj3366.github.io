@@ -1,14 +1,26 @@
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { Menu } from "lucide-react";
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+};
 
 const NavBar = () => {
-  const router = useRouter();
   const isMobile = useIsMobile();
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,9 +33,9 @@ const NavBar = () => {
   }, []);
 
   const navItems = [
-    { name: "About", href: "/#about" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Contact", href: "/#contact" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
     { name: "Resume", href: "/resume.pdf" },
   ];
 
@@ -36,7 +48,7 @@ const NavBar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="text-2xl font-bold">
+        <Link to="/" className="text-2xl font-bold">
           Anuj Garg
         </Link>
 
@@ -50,15 +62,15 @@ const NavBar = () => {
             <SheetContent>
               <nav className="flex flex-col space-y-6 mt-10">
                 {navItems.map((item) => (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className="text-xl hover:text-primary transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 ))}
-                <Link href="/admin">
+                <Link to="/admin">
                   <Button variant="outline">Admin</Button>
                 </Link>
               </nav>
@@ -67,15 +79,15 @@ const NavBar = () => {
         ) : (
           <nav className="flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className="hover:text-primary transition-colors"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
-            <Link href="/admin">
+            <Link to="/admin">
               <Button variant="outline">Admin</Button>
             </Link>
           </nav>
