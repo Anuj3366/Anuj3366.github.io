@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Hero from '@/components/Hero';
+import AboutSection from '@/components/AboutSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import ContactSection from '@/components/ContactSection';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Anuj Garg - Full-Stack Developer</title>
+        <meta name="description" content="Full-Stack Developer, Problem Solver, Code Enthusiast" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#2E97A7" />
+      </Helmet>
+
+      <NavBar />
+      
+      <main>
+        <Hero />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
