@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, FileText, Download } from "lucide-react";
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -32,23 +32,30 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const resumePath = "/Resume.pdf";
+
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-    { name: "Resume", href: "/resume.pdf" },
+    { name: "About", href: "#about", icon: null },
+    { name: "Projects", href: "#projects", icon: null },
+    { name: "Contact", href: "#contact", icon: null },
+    { 
+      name: "Resume", 
+      href: resumePath, 
+      icon: <FileText className="h-4 w-4" />,
+      download: true 
+    },
   ];
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-md"
+          ? "bg-background/90 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
-        <Link to="/" className="text-2xl font-bold">
+        <Link to="/" className="text-2xl font-bold text-gradient">
           Anuj Garg
         </Link>
 
@@ -65,9 +72,13 @@ const NavBar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-xl hover:text-primary transition-colors animate-slide-in-right"
+                    className="text-xl hover:text-primary transition-colors animate-slide-in-right flex items-center gap-2"
                     style={{ animationDelay: `${index * 0.1}s` }}
+                    download={item.download}
+                    target={item.download ? "_blank" : undefined}
+                    rel={item.download ? "noopener noreferrer" : undefined}
                   >
+                    {item.icon}
                     {item.name}
                   </a>
                 ))}
@@ -80,10 +91,15 @@ const NavBar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-primary transition-colors animate-fade-in"
+                className="hover:text-primary transition-colors animate-fade-in flex items-center gap-1 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                download={item.download}
+                target={item.download ? "_blank" : undefined}
+                rel={item.download ? "noopener noreferrer" : undefined}
               >
+                {item.icon}
                 {item.name}
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-primary"></span>
               </a>
             ))}
           </nav>

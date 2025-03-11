@@ -12,10 +12,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Anuj Garg - Full-Stack Developer</title>
-        <meta name="description" content="Full-Stack Developer, Problem Solver, Code Enthusiast" />
+        <title>Anuj Garg - Full-Stack Developer Portfolio</title>
+        <meta name="description" content="Full-Stack Developer portfolio showcasing projects, skills, and experience. Problem solver and code enthusiast." />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2E97A7" />
+        
+        {/* Added for GitHub Pages */}
+        <base href="/" />
       </Helmet>
 
       <NavBar />

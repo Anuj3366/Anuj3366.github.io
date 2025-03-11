@@ -1,9 +1,11 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Download, Code, Trophy } from "lucide-react";
 
 const Hero = () => {
+  const resumePath = "/Resume.pdf";
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 container mx-auto px-4 relative overflow-hidden">
       {/* Background elements */}
@@ -21,38 +23,59 @@ const Hero = () => {
           <span className="text-gradient">Full-Stack Developer</span> | Problem Solver | Code Enthusiast
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 animate-slide-up animate-delay-200">
-          B.E. CSE @ Chitkara University (9.38 CGPA) | Upcoming SDE Intern @ OLX |
-          Web Dev @Inuebyes
+          🎓 B.E. CSE @ Chitkara University (9.38 CGPA) | 💼 Upcoming SDE Intern @ OLX |
+          💻 Web Dev @Inuebyes
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12 animate-slide-up animate-delay-300">
           <a href="#projects">
-            <Button size="lg" className="gap-2 group">
+            <Button size="lg" className="gap-2 group w-full sm:w-auto">
+              <Code className="h-5 w-5" />
               View Projects 
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </a>
-          <Button size="lg" variant="outline" className="gap-2">
-            Download Resume
-          </Button>
+          <a href={resumePath} download target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="gap-2 group w-full sm:w-auto">
+              <Download className="h-5 w-5" />
+              Download Resume
+            </Button>
+          </a>
         </div>
 
-        <div className="flex justify-center gap-6 animate-slide-up animate-delay-400">
+        <div className="flex justify-center gap-8 animate-slide-up animate-delay-400">
           <a 
             href="https://github.com/Anuj3366" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
+            className="text-muted-foreground hover:text-foreground transition-all hover:scale-125 group"
           >
-            <Github className="h-6 w-6" />
+            <div className="flex flex-col items-center">
+              <Github className="h-7 w-7 mb-2" />
+              <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">GitHub</span>
+            </div>
           </a>
           <a 
             href="https://www.linkedin.com/in/anujgarg3366/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
+            className="text-muted-foreground hover:text-foreground transition-all hover:scale-125 group"
           >
-            <Linkedin className="h-6 w-6" />
+            <div className="flex flex-col items-center">
+              <Linkedin className="h-7 w-7 mb-2" />
+              <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">LinkedIn</span>
+            </div>
+          </a>
+          <a 
+            href="https://leetcode.com/anuj3366/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-all hover:scale-125 group"
+          >
+            <div className="flex flex-col items-center">
+              <Trophy className="h-7 w-7 mb-2" />
+              <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">LeetCode</span>
+            </div>
           </a>
         </div>
       </div>

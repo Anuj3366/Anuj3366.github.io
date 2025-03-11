@@ -83,6 +83,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
 }
 
@@ -111,6 +112,10 @@
     animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
 
+  .animate-bounce-slow {
+    animation: bounceSlow 2s ease-in-out infinite;
+  }
+
   .animate-delay-100 {
     animation-delay: 0.1s;
   }
@@ -129,6 +134,14 @@
 
   .animate-delay-500 {
     animation-delay: 0.5s;
+  }
+
+  .hover-rotate {
+    @apply transition-transform duration-300 hover:rotate-6;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
   }
 
   @keyframes fadeIn {
@@ -175,6 +188,15 @@
       transform: scale(1);
     }
   }
+
+  @keyframes bounceSlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
 }
 
 /* Add some basic prose styling for the about section */
@@ -202,4 +224,49 @@
 
 .skill-badge:hover {
   @apply transform scale-110;
+}
+
+/* Button hover animations */
+button {
+  @apply transition-all duration-300;
+}
+
+/* Section backgrounds with subtle patterns */
+section {
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Improve scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
 }
