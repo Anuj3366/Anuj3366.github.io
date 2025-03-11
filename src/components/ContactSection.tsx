@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import { Send } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -44,16 +45,22 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className="py-20 relative">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-muted/30 -z-10"></div>
+      <div className="absolute top-0 right-0 w-full h-20 bg-gradient-to-b from-background to-transparent -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-full h-20 bg-gradient-to-t from-background to-transparent -z-10"></div>
+      <div className="absolute -bottom-[30%] -right-[20%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center animate-slide-up">
           Get In Touch
         </h2>
-        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 animate-slide-up animate-delay-100">
           Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
         </p>
 
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-lg mx-auto bg-card/50 backdrop-blur-sm p-8 rounded-xl shadow-sm border animate-slide-up animate-delay-200">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -65,6 +72,7 @@ const ContactSection = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
+                className="bg-background/50 backdrop-blur-sm focus:bg-background transition-all duration-300"
                 required
               />
             </div>
@@ -79,6 +87,7 @@ const ContactSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
+                className="bg-background/50 backdrop-blur-sm focus:bg-background transition-all duration-300"
                 required
               />
             </div>
@@ -93,15 +102,23 @@ const ContactSection = () => {
                 onChange={handleChange}
                 placeholder="Your message here..."
                 rows={5}
+                className="bg-background/50 backdrop-blur-sm focus:bg-background transition-all duration-300"
                 required
               />
             </div>
             <Button
               type="submit"
-              className="w-full"
+              className="w-full group"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? (
+                "Sending..."
+              ) : (
+                <>
+                  Send Message 
+                  <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </>
+              )}
             </Button>
           </form>
         </div>

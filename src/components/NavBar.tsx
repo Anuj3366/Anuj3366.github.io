@@ -55,41 +55,37 @@ const NavBar = () => {
         {isMobile ? (
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="animate-fade-in">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent>
               <nav className="flex flex-col space-y-6 mt-10">
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-xl hover:text-primary transition-colors"
+                    className="text-xl hover:text-primary transition-colors animate-slide-in-right"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item.name}
                   </a>
                 ))}
-                <Link to="/admin">
-                  <Button variant="outline">Admin</Button>
-                </Link>
               </nav>
             </SheetContent>
           </Sheet>
         ) : (
           <nav className="flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:text-primary transition-colors"
+                className="hover:text-primary transition-colors animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.name}
               </a>
             ))}
-            <Link to="/admin">
-              <Button variant="outline">Admin</Button>
-            </Link>
           </nav>
         )}
       </div>
