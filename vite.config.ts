@@ -2,13 +2,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
-import { lovableTagger } from 'lovable-tagger'
+import { tagger } from 'lovable-tagger'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    lovableTagger()
+    tagger()
   ],
   base: './', // This ensures assets are loaded correctly on GitHub Pages
   resolve: {
@@ -16,4 +16,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: 8080
+  }
 })
