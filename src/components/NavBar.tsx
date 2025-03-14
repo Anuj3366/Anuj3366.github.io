@@ -32,6 +32,7 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Configure the resume path to work with both development and production environments
   const resumePath = "/Resume.pdf";
 
   const navItems = [

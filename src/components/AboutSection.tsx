@@ -2,8 +2,8 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
-  Code, Terminal, Coffee, Headphones, Seedling, BookOpen, 
-  Lightbulb, Laugh, Cpu, Database, Server, Globe
+  Code, Terminal, Coffee, Headphones, BookOpen, 
+  Lightbulb, Laugh, Cpu, Database, Server, Globe, Plant
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -27,14 +27,14 @@ const AboutSection = () => {
   ];
 
   const quickFacts = [
-    { icon: <Code className="h-5 w-5 text-primary" />, text: "Code by day, Debug by night" },
-    { icon: <Terminal className="h-5 w-5 text-primary" />, text: "Gaming breaks between coding sessions" },
-    { icon: <Coffee className="h-5 w-5 text-primary" />, text: "Coffee-powered programmer" },
-    { icon: <Headphones className="h-5 w-5 text-primary" />, text: "Coding with music = Productivity++" },
-    { icon: <Seedling className="h-5 w-5 text-primary" />, text: "Growing like my git commit history" },
-    { icon: <BookOpen className="h-5 w-5 text-primary" />, text: "Thinking in algorithms since GATE 2024 (331/1000)" },
-    { icon: <Lightbulb className="h-5 w-5 text-primary" />, text: "Building cool stuff that nobody asked for" },
-    { icon: <Laugh className="h-5 w-5 text-primary" />, text: "I speak fluent JavaScript and sarcasm" },
+    { icon: <Code className="h-5 w-5 text-primary" />, text: "Code by day, Debug by night 💻" },
+    { icon: <Terminal className="h-5 w-5 text-primary" />, text: "Gaming breaks between coding sessions 🎮" },
+    { icon: <Coffee className="h-5 w-5 text-primary" />, text: "Coffee-powered programmer ☕" },
+    { icon: <Headphones className="h-5 w-5 text-primary" />, text: "Coding with music = Productivity++ 🎵" },
+    { icon: <Plant className="h-5 w-5 text-primary" />, text: "Growing like my git commit history 🌱" },
+    { icon: <BookOpen className="h-5 w-5 text-primary" />, text: "Thinking in algorithms since GATE 2024 (331/1000) 📚" },
+    { icon: <Lightbulb className="h-5 w-5 text-primary" />, text: "Building cool stuff that nobody asked for 💡" },
+    { icon: <Laugh className="h-5 w-5 text-primary" />, text: "I speak fluent JavaScript and sarcasm 😄" },
   ];
 
   const skillCategories = [
@@ -60,23 +60,23 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none mb-10 animate-slide-up animate-delay-100">
             <p className="text-lg border-l-4 border-primary pl-4 italic">
-              I'm a passionate Full-Stack Developer and problem solver with a knack for building responsive and intuitive web applications.
-              Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an SDE Intern soon.
+              I'm a passionate Full-Stack Developer and problem solver with a knack for building responsive and intuitive web applications. 🚀
+              Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an SDE Intern soon! 🎓
             </p>
             <p className="text-lg">
-              When I'm not coding, you might find me gaming, listening to music, or working on personal projects. I believe in continuous learning and pushing my boundaries with every project I take on.
+              When I'm not coding, you might find me gaming 🎮, listening to music 🎵, or working on personal projects 🛠️. I believe in continuous learning and pushing my boundaries with every project I take on.
             </p>
           </div>
 
-          <div className="mb-12 animate-slide-up animate-delay-200 bg-muted/30 p-6 rounded-xl border border-border">
+          <div className="mb-12 animate-slide-up animate-delay-200 bg-muted/30 p-6 rounded-xl border border-border shadow-sm">
             <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-              <span className="text-gradient">Quick Facts About Me</span>
+              <span className="text-gradient">✨ Quick Facts About Me</span>
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {quickFacts.map((fact, index) => (
                 <li 
                   key={index} 
-                  className="flex items-center gap-3 p-3 bg-background/60 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-border/50" 
+                  className="flex items-center gap-3 p-3 bg-background/60 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-border/50 hover:border-primary/30 hover:bg-background/80" 
                   style={{ animationDelay: `${0.1 + index * 0.05}s` }}
                 >
                   {fact.icon}
@@ -88,12 +88,12 @@ const AboutSection = () => {
 
           <div className="animate-slide-up animate-delay-300">
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <span className="text-gradient">Skills & Technologies</span>
+              <span className="text-gradient">🛠️ Skills & Technologies</span>
             </h3>
             
             <div className="space-y-6">
               {skillCategories.map((category) => (
-                <div key={category.name} className="mb-4">
+                <div key={category.name} className="mb-4 p-4 bg-muted/20 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300">
                   <h4 className="text-lg font-medium mb-3 flex items-center gap-2">
                     {category.icon} {category.name}
                   </h4>

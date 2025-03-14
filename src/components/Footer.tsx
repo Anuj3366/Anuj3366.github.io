@@ -14,9 +14,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-muted py-12 relative">
+    <footer className="bg-muted/50 py-12 relative">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-grid opacity-5"></div>
       
       {/* Scroll to top button */}
       <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
@@ -33,11 +34,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 animate-slide-up">
             <h2 className="text-xl font-bold text-gradient">Anuj Garg</h2>
-            <p className="text-muted-foreground mt-2">Full-Stack Developer</p>
+            <p className="text-muted-foreground mt-2">✨ Full-Stack Developer</p>
             
             <div className="flex items-center gap-2 mt-4 text-muted-foreground group hover:text-foreground transition-colors">
               <MapPin className="h-4 w-4 group-hover:text-primary" />
-              <span>Punjab, India</span>
+              <span>Punjab, India 🇮🇳</span>
             </div>
             
             <a 
@@ -56,6 +57,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors hover:scale-125"
+                aria-label="GitHub Profile"
               >
                 <Github className="h-5 w-5" />
               </a>
@@ -64,6 +66,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors hover:scale-125"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -72,6 +75,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors hover:scale-125"
+                aria-label="LeetCode Profile"
               >
                 <ExternalLink className="h-5 w-5" />
               </a>
