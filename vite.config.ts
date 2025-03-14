@@ -1,45 +1,19 @@
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
-import { componentTagger } from "lovable-tagger";
-
-// Get the repository name from the package.json or environment variable
-const getBase = () => {
-  // For local development, use '/'
-  if (process.env.NODE_ENV === 'development') return '/';
-  // For GitHub Pages deployment, use the repository name
-  // If the project is deployed at the root domain, use '/'
-  return '/';
-};
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+import { lovableTagger } from 'lovable-tagger'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
+    lovableTagger()
+  ],
+  base: './', // This ensures assets are loaded correctly on GitHub Pages
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  base: getBase(),
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-        },
-      },
-    },
-  },
-  server: {
-    port: 8080,
-    open: true,
-    host: "::",
-  },
-}));
+})
