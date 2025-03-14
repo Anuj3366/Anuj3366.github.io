@@ -3,7 +3,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
   Code, Terminal, Coffee, Headphones, BookOpen, 
-  Lightbulb, Laugh, Cpu, Database, Server, Globe, Plant
+  Lightbulb, Laugh, Cpu, Database, Server, Globe, Trees
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -31,7 +31,7 @@ const AboutSection = () => {
     { icon: <Terminal className="h-5 w-5 text-primary" />, text: "Gaming breaks between coding sessions 🎮" },
     { icon: <Coffee className="h-5 w-5 text-primary" />, text: "Coffee-powered programmer ☕" },
     { icon: <Headphones className="h-5 w-5 text-primary" />, text: "Coding with music = Productivity++ 🎵" },
-    { icon: <Plant className="h-5 w-5 text-primary" />, text: "Growing like my git commit history 🌱" },
+    { icon: <Trees className="h-5 w-5 text-primary" />, text: "Growing like my git commit history 🌱" },
     { icon: <BookOpen className="h-5 w-5 text-primary" />, text: "Thinking in algorithms since GATE 2024 (331/1000) 📚" },
     { icon: <Lightbulb className="h-5 w-5 text-primary" />, text: "Building cool stuff that nobody asked for 💡" },
     { icon: <Laugh className="h-5 w-5 text-primary" />, text: "I speak fluent JavaScript and sarcasm 😄" },
