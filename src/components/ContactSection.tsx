@@ -79,7 +79,7 @@ const ContactSection = () => {
     "Problem Solving",
     "Web Development"
   ];
-  
+
   const certifications = [
     "AWS Academy Graduate - AWS Academy Cloud Foundations",
     "Introduction to Public Speaking",
@@ -87,7 +87,7 @@ const ContactSection = () => {
     "Responsive Web Design",
     "Introduction to Artificial Intelligence (AI)"
   ];
-  
+
   const education = [
     {
       institution: "Chitkara University",
@@ -106,7 +106,7 @@ const ContactSection = () => {
       period: "April 2011 - April 2019"
     }
   ];
-  
+
   const experience = [
     {
       company: "iNeuBytes",
@@ -126,7 +126,7 @@ const ContactSection = () => {
       <div className="absolute -bottom-[30%] -left-[20%] w-[60%] h-[60%] bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute top-1/4 right-1/4 w-10 h-10 bg-yellow-500/10 rounded-full blur-lg animate-pulse -z-10"></div>
       <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-emerald-500/10 rounded-full blur-lg animate-pulse delay-300 -z-10"></div>
-      
+
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center animate-slide-up relative inline-block mx-auto">
           <span className="text-gradient">Get In Touch</span>
@@ -214,7 +214,7 @@ const ContactSection = () => {
                       </span>
                     ) : (
                       <>
-                        Send Message 
+                        Send Message
                         <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </>
                     )}
@@ -222,7 +222,7 @@ const ContactSection = () => {
                 </form>
               </div>
             </div>
-            
+
             <div className="md:col-span-7 space-y-6 animate-slide-up animate-delay-300">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
@@ -235,8 +235,8 @@ const ContactSection = () => {
                         {item.icon}
                         <div>
                           <p className="font-medium">{item.title}</p>
-                          <a 
-                            href={item.link} 
+                          <a
+                            href={item.link}
                             className="text-sm text-muted-foreground group-hover:text-primary transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -257,7 +257,7 @@ const ContactSection = () => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
                   <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
                     <Award className="h-5 w-5 text-primary" /> Top Skills
@@ -272,7 +272,7 @@ const ContactSection = () => {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
                   <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
@@ -288,62 +288,30 @@ const ContactSection = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
                   <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
-                    <Code className="h-5 w-5 text-primary" /> Certifications
+                    <MapPin className="h-5 w-5 text-primary" /> Looking For
                   </h3>
                   <ul className="space-y-2">
-                    {certifications.map((cert, index) => (
-                      <li key={index} className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
-                        <span className="h-2 w-2 rounded-full bg-primary"></span>
-                        <span className="text-xs md:text-sm">{cert}</span>
-                      </li>
-                    ))}
+                    <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
+                      <span className="h-2 w-2 rounded-full bg-primary"></span>
+                      <span className="text-sm">Full-time opportunities</span>
+                    </li>
+                    <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
+                      <span className="h-2 w-2 rounded-full bg-primary"></span>
+                      <span className="text-sm">Freelance projects</span>
+                    </li>
+                    <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
+                      <span className="h-2 w-2 rounded-full bg-primary"></span>
+                      <span className="text-sm">Open source collaborations</span>
+                    </li>
+                    <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
+                      <span className="h-2 w-2 rounded-full bg-primary"></span>
+                      <span className="text-sm">Networking with fellow developers</span>
+                    </li>
                   </ul>
                 </div>
-              </div>
-              
-              <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
-                  <GraduationCap className="h-5 w-5 text-primary" /> Education
-                </h3>
-                <div className="space-y-4">
-                  {education.map((edu, index) => (
-                    <div key={index} className="p-3 bg-background/40 rounded-lg">
-                      <h4 className="font-medium">{edu.institution}</h4>
-                      <p className="text-sm text-primary">{edu.degree}</p>
-                      <p className="text-xs text-muted-foreground mt-1">{edu.period}</p>
-                      {edu.achievements && (
-                        <p className="text-xs font-medium mt-1">{edu.achievements}</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" /> Looking For
-                </h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
-                    <span className="h-2 w-2 rounded-full bg-primary"></span>
-                    <span className="text-sm">Full-time opportunities</span>
-                  </li>
-                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
-                    <span className="h-2 w-2 rounded-full bg-primary"></span>
-                    <span className="text-sm">Freelance projects</span>
-                  </li>
-                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
-                    <span className="h-2 w-2 rounded-full bg-primary"></span>
-                    <span className="text-sm">Open source collaborations</span>
-                  </li>
-                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg transition-all hover:bg-background/70">
-                    <span className="h-2 w-2 rounded-full bg-primary"></span>
-                    <span className="text-sm">Networking with fellow developers</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
