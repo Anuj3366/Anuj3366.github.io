@@ -1,69 +1,84 @@
-# Welcome to your Lovable project
+# Anuj Garg Portfolio Website
 
-## Project info
+Welcome to my personal portfolio website repository. This website showcases my work, projects, and skills, and is available live at [anujgarg3366.me](https://anujgarg3366.me).
 
-**URL**: https://lovable.dev/projects/8ae088b0-b028-4ec4-a1eb-882ab6cc7d1b
+## Technologies Used
 
-## How can I edit this code?
+- **React** – Building interactive user interfaces  
+- **TypeScript** – Ensuring robust, type-safe code  
+- **Vite** – Providing fast development and build tooling  
+- **Tailwind CSS** – Offering a utility-first approach for styling  
+- **shadcn-ui** – (Optional) Pre-built UI components to enhance the design  
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Responsive Design:** Optimized for both desktop and mobile experiences  
+- **Modern UI/UX:** Clean and minimal design for ease of navigation  
+- **Portfolio Projects:** Detailed pages to showcase my work and achievements  
+- **Blog & Updates:** (If applicable) A section for sharing insights and tutorials  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8ae088b0-b028-4ec4-a1eb-882ab6cc7d1b) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+Ensure you have [Node.js](https://nodejs.org/) and npm installed (Node.js v16 or later is recommended).
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Clone the repository:
 
-Follow these steps:
+```bash
+git clone https://github.com/Anuj3366/Anuj3366.github.io.git
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Navigate into the project directory:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+cd Anuj3366.github.io
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+Install the required dependencies:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+### Running Locally
+
+Start the development server with:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The website will launch at [http://localhost:8080](http://localhost:8080).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+To build the project for production, run:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+Then, you can preview the production build locally:
 
-This project is built with .
+```bash
+npm run start
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+This project is set up to be deployed via GitHub Pages (or your preferred hosting service). For a custom domain setup, please refer to the relevant documentation or deploy using services like Netlify.
 
-Simply open [Lovable](https://lovable.dev/projects/8ae088b0-b028-4ec4-a1eb-882ab6cc7d1b) and click on Share -> Publish.
+## Contributing
 
-## I want to use a custom domain - is that possible?
+Contributions are welcome! If you'd like to suggest improvements or add new features, feel free to fork the repository and submit a pull request.
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, you can reach me at [anujgarg3366@gmail.com](mailto:anujgarg3366@gmail.com) or visit my website at [anujgarg3366.me](https://anujgarg3366.me).

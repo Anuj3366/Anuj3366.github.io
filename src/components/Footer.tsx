@@ -38,15 +38,15 @@ const Footer = () => {
             
             <div className="flex items-center gap-2 mt-4 text-muted-foreground group hover:text-foreground transition-colors">
               <MapPin className="h-4 w-4 group-hover:text-primary" />
-              <span>Punjab, India 🇮🇳</span>
+              <span>Delhi, India 🇮🇳</span>
             </div>
             
             <a 
-              href="mailto:contact@anujgarg.dev" 
+              href="mailto:anujgarg3366@gmail.com" 
               className="flex items-center gap-2 mt-2 text-muted-foreground hover:text-foreground group transition-colors"
             >
               <Mail className="h-4 w-4 group-hover:text-primary" />
-              <span>contact@anujgarg.dev</span>
+              <span>anujgarg3366@gmail.com</span>
             </a>
           </div>
 
@@ -81,7 +81,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground flex items-center">
-              © {currentYear} Anuj Garg. Made with <Heart className="h-3 w-3 mx-1 text-red-500 animate-pulse" /> All rights reserved.
+              © {currentYear} Made by Anuj Garg. All rights reserved.
             </p>
           </div>
         </div>

@@ -8,23 +8,23 @@ import { ExternalLink, Github, Star, Award, Code as CodeIcon } from "lucide-reac
 const projects = [
   {
     id: "1",
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with user authentication, product management, and secure payment processing. Features include user reviews, wishlists, and admin dashboard.",
+    title: "Bidcommerce Platform",
+    description: "BidCommerce is an e-commerce platform, blending online shopping and auction features. It offers a seamless user experience, modern technologies, a bidding system, and public auction chats.",
     imageUrl: "/placeholder.svg",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com/example",
+    tags: ["Nextjs", "Node.js", "MongoDB", "Express", "Stripe"],
+    demoUrl: "https://bidcommerce.netlify.app/",
+    githubUrl: "https://github.com/Anuj3366/BidCommerce",
     featured: true,
     emoji: "🛒"
   },
   {
     id: "2",
-    title: "Task Management App",
-    description: "A Kanban-style task management application with drag-and-drop functionality and team collaboration features. Includes real-time updates and mobile responsiveness.",
+    title: "Password-Management-System",
+    description: "The Password Management System is a command-line tool designed to help users securely manage their website passwords. It offers essential password management features, including password storage, retrieval, and strong password generation.",
     imageUrl: "/placeholder.svg",
-    tags: ["Next.js", "Firebase", "Tailwind CSS", "React DnD"],
+    tags: ["C", "Bash"],
     demoUrl: "https://example.com",
-    githubUrl: "https://github.com/example",
+    githubUrl: "https://github.com/Anuj3366/Password-Management-System",
     featured: true,
     emoji: "✅"
   },
@@ -35,7 +35,7 @@ const projects = [
     imageUrl: "/placeholder.svg",
     tags: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
     demoUrl: "https://example.com",
-    githubUrl: "https://github.com/example",
+    githubUrl: "https://anujgarg3366.me",
     featured: true,
     emoji: "🎨"
   }

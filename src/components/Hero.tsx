@@ -5,7 +5,7 @@ import { ArrowRight, Github, Linkedin, Download, Code, Trophy } from "lucide-rea
 
 const Hero = () => {
   // Configure the resume path to work with both development and production environments
-  const resumePath = "/Resume.pdf";
+  const resumePath = "https://drive.google.com/file/d/15O7JU7GS1PXVOMJohBxCrLKGfd_G9by0/view?usp=sharing";
 
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 container mx-auto px-4 relative overflow-hidden">
@@ -26,7 +26,7 @@ const Hero = () => {
           <span className="text-gradient">Full-Stack Developer</span> | Problem Solver | Code Enthusiast
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 animate-slide-up animate-delay-200">
-          🎓 B.E. CSE @ Chitkara University (9.38 CGPA) | 💼 Upcoming SDE Intern @ OLX |
+          🎓 B.E. CSE @ Chitkara University (9.38 CGPA) | 💼 Upcoming Intern @ OLX |
           💻 Web Dev @Inuebyes
         </p>
 

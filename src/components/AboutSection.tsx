@@ -76,11 +76,11 @@ const AboutSection = () => {
       company: "iNeuBytes", 
       position: "Web Developer", 
       period: "August 2023 - September 2023",
-      duration: "(2 months)"
+      duration: "(1 months)"
     },
     {
       company: "OLX",
-      position: "SDE Intern",
+      position: "Intern",
       period: "Upcoming",
       duration: ""
     }
@@ -102,7 +102,7 @@ const AboutSection = () => {
           <div className="prose prose-lg max-w-none mb-10 animate-slide-up animate-delay-100">
             <p className="text-lg border-l-4 border-primary pl-4 italic">
               I'm a passionate Full-Stack Developer and problem solver with a knack for building responsive and intuitive web applications. 🚀
-              Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an SDE Intern soon! 🎓
+              Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an Intern soon! 🎓
             </p>
             <p className="text-lg">
               I'm a fourth-year Computer Science student passionate about turning complex challenges into innovative solutions. With hands-on experience in full-stack development and a proven track record on coding platforms like LeetCode and GeeksforGeeks, I thrive on collaboration and creative problem-solving. When I'm not coding, you might find me gaming 🎮, enjoying some pizza 🍕, listening to music 🎵, or exploring new tech trends 💻.

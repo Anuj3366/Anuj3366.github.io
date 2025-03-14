@@ -7,6 +7,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/index";
 import NotFound from "./pages/NotFound";
 import AdminPage from "./pages/admin";
+import Projects from "./pages/projects";
 
 // Create a client for React Query
 const queryClient = new QueryClient({
@@ -27,7 +28,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/admin" element={<AdminPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
