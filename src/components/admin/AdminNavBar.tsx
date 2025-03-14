@@ -1,28 +1,27 @@
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/router";
 
 const AdminNavBar = () => {
-  const router = useRouter();
-
   return (
     <header className="bg-background/80 backdrop-blur-md shadow-md sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between p-4">
+      <div className="container mx-auto flex items-center justify-between p-4 max-w-7xl">
         <div className="flex items-center gap-2">
-          <Link href="/admin" className="text-xl font-bold">
+          <Link to="/admin" className="text-xl font-bold">
             Admin Dashboard
           </Link>
         </div>
 
         <div className="flex items-center gap-4">
-          <Link href="/">
+          <Link to="/">
             <Button variant="ghost">View Site</Button>
           </Link>
-          <Button variant="outline" onClick={() => router.push("/")}>
-            Logout
-          </Button>
+          <Link to="/">
+            <Button variant="outline">
+              Logout
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

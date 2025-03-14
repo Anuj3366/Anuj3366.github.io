@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { ProjectForm } from '@/components/admin/ProjectForm';
+import ProjectForm from '@/components/admin/ProjectForm';
 import ProjectList from '@/components/admin/ProjectList';
 import { useState } from 'react';
 import { Project } from '@/types/project';
@@ -67,7 +67,7 @@ const AdminPage = () => {
 
       <AdminNavBar />
       
-      <main className="container px-4 py-8 mx-auto">
+      <main className="container px-4 py-8 mx-auto max-w-7xl">
         <h1 className="text-3xl font-bold mb-6">Portfolio Admin</h1>
         
         <Tabs defaultValue="projects" className="space-y-6">
