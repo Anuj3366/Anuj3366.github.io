@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-import { Send, Mail, MessageSquare, User, Clock } from "lucide-react";
+import { Send, Mail, MessageSquare, User, Clock, Phone, Linkedin, Globe, Award } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +43,41 @@ const ContactSection = () => {
       setIsSubmitting(false);
     }
   };
+
+  const contactInfo = [
+    {
+      icon: <Phone className="h-5 w-5 text-muted-foreground mt-0.5" />,
+      title: "Phone",
+      value: "+91 9899854206",
+      link: "tel:+919899854206"
+    },
+    {
+      icon: <Mail className="h-5 w-5 text-muted-foreground mt-0.5" />,
+      title: "Email",
+      value: "anujgarg3366@gmail.com",
+      link: "mailto:anujgarg3366@gmail.com"
+    },
+    {
+      icon: <Linkedin className="h-5 w-5 text-muted-foreground mt-0.5" />,
+      title: "LinkedIn",
+      value: "anujgarg3366",
+      link: "https://www.linkedin.com/in/anujgarg3366/"
+    },
+    {
+      icon: <Globe className="h-5 w-5 text-muted-foreground mt-0.5" />,
+      title: "Portfolio",
+      value: "portfolio-anuj.netlify.app",
+      link: "https://portfolio-anuj.netlify.app/"
+    }
+  ];
+
+  const topSkills = [
+    "Data Structures & Algorithms",
+    "Full-Stack Development",
+    "Java",
+    "Problem Solving",
+    "Web Development"
+  ];
 
   return (
     <section id="contact" className="py-20 relative">
@@ -136,21 +171,28 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="md:col-span-2 animate-slide-up animate-delay-300">
-              <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 mb-6 hover:border-primary/30 transition-all duration-300">
+            <div className="md:col-span-2 space-y-6 animate-slide-up animate-delay-300">
+              <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
                 <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" /> Contact Info
                 </h3>
                 <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-muted-foreground mt-0.5" />
-                    <div>
-                      <p className="font-medium">Email</p>
-                      <a href="mailto:contact@anujgarg.dev" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        contact@anujgarg.dev
-                      </a>
-                    </div>
-                  </li>
+                  {contactInfo.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 group">
+                      {item.icon}
+                      <div>
+                        <p className="font-medium">{item.title}</p>
+                        <a 
+                          href={item.link} 
+                          className="text-sm text-muted-foreground group-hover:text-primary transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.value}
+                        </a>
+                      </div>
+                    </li>
+                  ))}
                   <li className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-muted-foreground mt-0.5" />
                     <div>
@@ -164,21 +206,35 @@ const ContactSection = () => {
               </div>
               
               <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-lg font-medium mb-4">📋 Looking For</h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-2">
+                  <Award className="h-5 w-5 text-primary" /> Top Skills
+                </h3>
+                <ul className="space-y-2">
+                  {topSkills.map((skill, index) => (
+                    <li key={index} className="flex items-center gap-2 p-2 bg-background/40 rounded-lg">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                      <span className="text-sm">{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="bg-card/30 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-border/60 hover:border-primary/30 transition-all duration-300">
+                <h3 className="text-lg font-medium mb-4 flex items-center gap-2">📋 Looking For</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
                     Full-time opportunities
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
                     Freelance projects
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
                     Open source collaborations
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2 p-2 bg-background/40 rounded-lg">
                     <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
                     Networking with fellow developers
                   </li>

@@ -3,7 +3,8 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
   Code, Terminal, Coffee, Headphones, BookOpen, 
-  Lightbulb, Laugh, Cpu, Database, Server, Globe, Trees
+  Lightbulb, Laugh, Cpu, Database, Server, Globe, Trees,
+  Award, School, Briefcase, GraduationCap, Star
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -45,6 +46,46 @@ const AboutSection = () => {
     { name: "DevOps", icon: <Cpu className="h-5 w-5" />, category: "devops" },
   ];
 
+  const certifications = [
+    "AWS Academy Graduate - AWS Academy Cloud Foundations",
+    "Introduction to Public Speaking",
+    "Version Control",
+    "Responsive Web Design",
+    "Introduction to Artificial Intelligence (AI)"
+  ];
+
+  const education = [
+    { 
+      institution: "Chitkara University", 
+      degree: "Bachelor of Engineering - BE, Computer Science", 
+      period: "July 2021 - July 2025",
+      gpa: "9.38 CGPA"
+    },
+    { 
+      institution: "N.C Jindal Public School", 
+      period: "April 2019 - April 2021"
+    },
+    { 
+      institution: "Adarsh Public School", 
+      period: "April 2011 - April 2019"
+    }
+  ];
+
+  const experience = [
+    { 
+      company: "iNeuBytes", 
+      position: "Web Developer", 
+      period: "August 2023 - September 2023",
+      duration: "(2 months)"
+    },
+    {
+      company: "OLX",
+      position: "SDE Intern",
+      period: "Upcoming",
+      duration: ""
+    }
+  ];
+
   return (
     <section id="about" className="py-20 relative">
       {/* Background decoration */}
@@ -64,7 +105,7 @@ const AboutSection = () => {
               Currently completing my B.E. in Computer Science at Chitkara University with a 9.38 CGPA, I'm set to join OLX as an SDE Intern soon! 🎓
             </p>
             <p className="text-lg">
-              When I'm not coding, you might find me gaming 🎮, listening to music 🎵, or working on personal projects 🛠️. I believe in continuous learning and pushing my boundaries with every project I take on.
+              I'm a fourth-year Computer Science student passionate about turning complex challenges into innovative solutions. With hands-on experience in full-stack development and a proven track record on coding platforms like LeetCode and GeeksforGeeks, I thrive on collaboration and creative problem-solving. When I'm not coding, you might find me gaming 🎮, enjoying some pizza 🍕, listening to music 🎵, or exploring new tech trends 💻.
             </p>
           </div>
 
@@ -86,7 +127,65 @@ const AboutSection = () => {
             </ul>
           </div>
 
-          <div className="animate-slide-up animate-delay-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="animate-slide-up animate-delay-300 bg-muted/30 p-6 rounded-xl border border-border shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                <GraduationCap className="h-5 w-5 text-primary" />
+                <span className="text-gradient">Education</span>
+              </h3>
+              <ul className="space-y-5">
+                {education.map((edu, index) => (
+                  <li key={index} className="bg-background/60 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300 shadow-sm">
+                    <h4 className="font-semibold">{edu.institution}</h4>
+                    {edu.degree && <p className="text-sm text-muted-foreground">{edu.degree}</p>}
+                    <div className="flex justify-between items-center mt-1">
+                      <span className="text-xs text-muted-foreground">{edu.period}</span>
+                      {edu.gpa && <Badge variant="outline" className="text-xs bg-primary/10 border-primary/20">{edu.gpa}</Badge>}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="animate-slide-up animate-delay-400 bg-muted/30 p-6 rounded-xl border border-border shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                <Briefcase className="h-5 w-5 text-primary" />
+                <span className="text-gradient">Experience</span>
+              </h3>
+              <ul className="space-y-5">
+                {experience.map((exp, index) => (
+                  <li key={index} className="bg-background/60 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300 shadow-sm">
+                    <div className="flex justify-between items-start">
+                      <h4 className="font-semibold">{exp.company}</h4>
+                      <Badge variant="outline" className="text-xs">{exp.duration}</Badge>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{exp.position}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{exp.period}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="animate-slide-up animate-delay-500 mb-12 bg-muted/30 p-6 rounded-xl border border-border shadow-sm">
+            <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <Award className="h-5 w-5 text-primary" />
+              <span className="text-gradient">Certifications</span>
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {certifications.map((cert, index) => (
+                <li 
+                  key={index} 
+                  className="flex items-center gap-2 p-3 bg-background/60 rounded-lg shadow-sm border border-border/50 hover:border-primary/30 transition-all duration-300"
+                >
+                  <Star className="h-4 w-4 text-yellow-500 flex-shrink-0" />
+                  <span className="text-sm">{cert}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="animate-slide-up animate-delay-600">
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <span className="text-gradient">🛠️ Skills & Technologies</span>
             </h3>
