@@ -1,0 +1,22 @@
+
+{
+  "name": "Anuj Garg - Portfolio",
+  "short_name": "Anuj Garg",
+  "description": "Full-Stack Developer, Problem Solver, Code Enthusiast",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2E97A7",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
